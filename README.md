@@ -25,7 +25,7 @@ ruby directory.rb
     [Commit 4700b95](https://github.com/diaryofdiscoveries/student-directory/commit/4700b95161e5fdaf7a74d8e2b1a2f12d64d85fd4)
 
 5.  Our code only works with the student name and cohort. Add more information: hobbies, country of birth, height, etc.
-    
+    [Commit 2c425c5](https://github.com/diaryofdiscoveries/student-directory/commit/2c425c5878c38478d718f5f1253da8acf0bd96f7)
 
 6.  Research how the method center() of the String class works. Use it in your code to make the output beautifully aligned.
     
