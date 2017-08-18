@@ -22,7 +22,7 @@ ruby directory.rb
     [Commit 028d1d8](https://github.com/diaryofdiscoveries/student-directory/commit/028d1d8c27f1bbe00a18c8249a2b3cdf9216a572)
 
 4.  Rewrite the each() method that prints all students using while or until control flow methods.
-    
+    [Commit 4700b95](https://github.com/diaryofdiscoveries/student-directory/commit/4700b95161e5fdaf7a74d8e2b1a2f12d64d85fd4)
 
 5.  Our code only works with the student name and cohort. Add more information: hobbies, country of birth, height, etc.
     
