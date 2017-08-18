@@ -13,7 +13,7 @@ ruby directory.rb
 # Exercises - Step 8 :point_down:
 
 1.  We're using the each() method to iterate over an array of students. How can you modify the program to print a number before the name of each student, e.g. "1. Dr. Hannibal Lecter"?
-    [ ] 
+    [x] [Commit cae5587](https://github.com/diaryofdiscoveries/student-directory/commit/cae55873ab047632fc524ec0e387cc47762bc266) 
 
 2.  Modify your program to only print the students whose name begins with a specific letter.
     [ ] 
