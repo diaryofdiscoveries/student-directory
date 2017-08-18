@@ -31,7 +31,7 @@ ruby directory.rb
     [Commit e8cad70](https://github.com/diaryofdiscoveries/student-directory/commit/e8cad707656ffb099fe696088dde5040e19fe077)
 
 7.  In the input_students method the cohort value is hard-coded. How can you ask for both the name and the cohort? What if one of the values is empty? Can you supply a default value? The input will be given to you as a string? How will you convert it to a symbol? What if the user makes a typo?
-    
+    [Commit 43d29fd](https://github.com/diaryofdiscoveries/student-directory/commit/43d29fdb8740ce050807989f03db79b2cf615548)
 
 8.  Once you complete the previous exercise, change the way the users are displayed: print them grouped by cohorts. To do this, you'll need to get a list of all existing cohorts (the  map() method may be useful but it's not the only option), iterate over it and only print the students from that cohort.
     
