@@ -19,7 +19,7 @@ ruby directory.rb
     [Commit 096e11a](https://github.com/diaryofdiscoveries/student-directory/commit/096e11a7a36d07e6cae1fb7df60f0605d5477fb8)
 
 3.  Modify your program to only print the students whose name is shorter than 12 characters. 
- 
+    [Commit 028d1d8](https://github.com/diaryofdiscoveries/student-directory/commit/028d1d8c27f1bbe00a18c8249a2b3cdf9216a572)
 
 4.  Rewrite the each() method that prints all students using while or until control flow methods.
     
