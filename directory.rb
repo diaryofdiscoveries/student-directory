@@ -1,20 +1,43 @@
-def input_students
-  puts "Please enter the names of the students"
-  puts "To finish, just hit return twice"
-  #create an empty array
-  students = []
-  #get the first name
-  name = gets.chomp
-  #while the name is not empty, repeat this code
-  while !name.empty? do
-    #add the student hash to the array
-    students << {name: name, cohort: :november}
-    puts "Now we have #{students.count} students"
-    #get another name from the user
-    name = gets.chomp
+# 8.5
+def create_new_student
+  puts "Do you want to create a new student? (y/n)"
+  continue = gets.chomp.downcase
+  if continue == "y"
+    return true
+  elsif continue == "n"
+    return false
+  else
+    puts "Invalid choice"
   end
-  #return the array of students
+  create_new_student
+end
+
+def input_students
+  students = []
+  continue = create_new_student
+  while continue
+    puts "Please enter the name of the student"
+    name = gets.chomp
+    puts "Please enter the country of birth"
+    country_of_birth = gets.chomp
+    hobbies = add_hobbies
+    students << { name: name, cohort: :november, country_of_birth: country_of_birth, hobbies: hobbies }
+    puts "Now we have #{students.count} students"
+    continue = create_new_student
+  end
   students
+end
+
+def add_hobbies
+  hobbies = []
+  puts "Please enter student's hobbies"
+  puts "(To finish, just hit return twice)"
+  hobby = gets.chomp
+  while !hobby.empty?
+    hobbies << hobby
+    hobby = gets.chomp
+  end
+  hobbies
 end
 
 def print_header
@@ -26,7 +49,7 @@ end
 def print(students)
   i = 0
   while i < students.count
-  puts "#{i + 1}.#{students[i][:name]} (#{students[i][:cohort]})"
+  puts "#{i + 1}. #{students[i][:name]}, #{students[i][:country_of_birth]} (#{students[i][:cohort]})"
   i += 1
   end
 end
@@ -38,7 +61,7 @@ def print_by_first_letter(students)
   number_of_matches = 0
   students.each do |student|
     if student[:name].start_with?(letter.upcase, letter.downcase)
-      puts "#{student[:name]} (#{student[:cohort]} cohort)"
+      puts "#{student[:name]}, #{students[i][:country_of_birth]} (#{student[:cohort]} cohort)"
       number_of_matches += 1
     else
     end  
@@ -55,7 +78,7 @@ def print_by_name_length(students)
   number_of_matches = 0
   students.each do |student|
     if student[:name].length <= max_length.to_i
-      puts "#{student[:name]} (#{student[:cohort]} cohort)"
+      puts "#{student[:name]}, #{students[i][:country_of_birth]} (#{student[:cohort]} cohort)"
       number_of_matches += 1
     else
     end  
