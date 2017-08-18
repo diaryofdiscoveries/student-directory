@@ -21,10 +21,12 @@ def input_students
   while continue
     puts "Please enter the name of the student".center(@width)
     name = gets.chomp
+    puts "Please enter the cohort".center(@width)
+    cohort = gets.chomp
     puts "Please enter the country of birth".center(@width)
     country_of_birth = gets.chomp
     hobbies = add_hobbies
-    students << { name: name, cohort: :november, country_of_birth: country_of_birth, hobbies: hobbies }
+    students << { name: name, cohort: cohort, country_of_birth: country_of_birth, hobbies: hobbies }
     puts "Now we have #{students.count} students".center(@width)
     continue = create_new_student
   end
