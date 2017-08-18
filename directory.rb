@@ -1,6 +1,9 @@
 # 8.6
 @width = 50
 
+# 8.7
+@students = []
+
 # 8.5
 def create_new_student
   puts "Do you want to create a new student? (y/n)".center(@width)
@@ -16,7 +19,6 @@ def create_new_student
 end
 
 def input_students
-  students = []
   continue = create_new_student
   while continue
     puts "Please enter the name of the student".center(@width)
@@ -26,11 +28,11 @@ def input_students
     puts "Please enter the country of birth".center(@width)
     country_of_birth = gets.chomp
     hobbies = add_hobbies
-    students << { name: name, cohort: cohort.to_sym, country_of_birth: country_of_birth, hobbies: hobbies }
-    puts "Now we have #{students.count} students".center(@width)
+    @students << { name: name, cohort: cohort.to_sym, country_of_birth: country_of_birth, hobbies: hobbies }
+    puts "Now we have #{@students.count} students".center(@width)
     continue = create_new_student
   end
-  students
+  @students
 end
 
 def add_hobbies
@@ -53,8 +55,8 @@ end
 # 8.4 
 def print(students)
   i = 0
-  while i < students.count
-  puts "#{i + 1}. #{students[i][:name]}, #{students[i][:country_of_birth]} (#{students[i][:cohort]})".center(@width)
+  while i < @students.count
+  puts "#{i + 1}. #{@students[i][:name]}, #{@students[i][:country_of_birth]} (#{@students[i][:cohort]})".center(@width)
   i += 1
   end
 end
@@ -64,9 +66,9 @@ def print_by_first_letter(students)
   puts "Student names beginning with: (Please enter a letter)".center(@width)
   letter = gets.chomp
   number_of_matches = 0
-  students.each do |student|
+  @students.each do |student|
     if student[:name].start_with?(letter.upcase, letter.downcase)
-      puts "#{student[:name]}, #{students[i][:country_of_birth]} (#{student[:cohort]} cohort)".center(@width)
+      puts "#{student[:name]}, #{student[:country_of_birth]} (#{student[:cohort]} cohort)".center(@width)
       number_of_matches += 1
     else
     end  
@@ -81,9 +83,9 @@ def print_by_name_length(students)
   puts "Names with maximum characters of: (Please enter a number)".center(@width)
   max_length = gets.chomp
   number_of_matches = 0
-  students.each do |student|
+  @students.each do |student|
     if student[:name].length <= max_length.to_i
-      puts "#{student[:name]}, #{students[i][:country_of_birth]} (#{student[:cohort]} cohort)".center(@width)
+      puts "#{student[:name]}, #{student[:country_of_birth]} (#{student[:cohort]} cohort)".center(@width)
       number_of_matches += 1
     else
     end  
@@ -95,11 +97,11 @@ end
 
 
 def print_footer(students)
-  puts "Overall, we have #{students.count} great students".center(@width)
+  puts "Overall, we have #{@students.count} great students".center(@width)
 end
 
 #call the methods
-students = input_students
+@students = input_students
 print_header
-print(students)
-print_footer(students)
+print(@students)
+print_footer(@students)
