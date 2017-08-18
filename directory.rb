@@ -26,7 +26,7 @@ end
 def print(students)
   i = 0
   while i < students.count
-  puts "#{students[i][:name]} (#{students[i][:cohort]})"
+  puts "#{i + 1}.#{students[i][:name]} (#{students[i][:cohort]})"
   i += 1
   end
 end
