@@ -43,7 +43,7 @@ ruby directory.rb
     [Commit f119a25](https://github.com/diaryofdiscoveries/student-directory/commit/f119a25a2a5e5e0b0d2b029f5f1302ce02396332)
     
 11. Once you have completed the "Asking for user input" section, open [this file](https://raw.githubusercontent.com/anitacanita/student-directory/master/typos.rb). It's Ruby code but it has some typos. Copy it to a local file and open it in Atom without syntax highlighting. To do this, select "Plain Text" in the lower right corner of the window. Now, find all typos in that file and correct them. Use your experience, online documentation, etc. to find all mistakes. Run the script in the terminal from time to time to make sure it works as it should. Google the errors Ruby will give you, think about what they could mean, try different things but don't look the answer up.
-    
+    [Commit 974021d](https://github.com/diaryofdiscoveries/student-directory/commit/974021d9ddd2be3da9f93d9151464b3e0dc1a0a3)
 
 12. What happens if the user doesn't enter any students? It will try to print an empty list. How can you use an if statement to only print the list if there is at least one student in there?
     [Commit 6d361ff](https://github.com/diaryofdiscoveries/student-directory/commit/6d361ff9d0faf26754545a9aa53ec74c14344fe8)    
