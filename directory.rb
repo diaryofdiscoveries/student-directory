@@ -155,7 +155,7 @@ def print_student_list_by_cohort(students)
 end
 
 # 8.2
-def print_by_first_letter(students)
+def search_by_first_letter(students)
   if @students.empty?
     puts "No students available".center(@width)
   else
@@ -170,13 +170,13 @@ def print_by_first_letter(students)
       end  
     end
     puts
-    puts "We have #{pluralize_students @students.count} whose name begins with #{letter}".center(@width)
+    puts "We have #{pluralize_students number_of_matches} whose name begins with #{letter}".center(@width)
     puts
   end
 end
 
 # 8.3
-def print_by_name_length(students)
+def search_by_name_length(students)
   if @students.empty?
     puts "No students available".center(@width)
   else
@@ -191,7 +191,7 @@ def print_by_name_length(students)
       end  
     end
     puts
-    puts "We have #{pluralize_students @students.count} with a name of maximum #{max_length} characters".center(@width)
+    puts "We have #{pluralize_students number_of_matches} with a name of maximum #{max_length} characters".center(@width)
     puts
   end
 end
