@@ -37,7 +37,7 @@ ruby directory.rb
     [Commit d70c556](https://github.com/diaryofdiscoveries/student-directory/commit/d70c5562ec8203d586b49d35e71cc4f56f561ff9)
 
 9.  Right now if we have only one student, the user will see a message "Now we have 1 students", whereas it should be "Now we have 1 student". How can you fix it so that it used singular form when appropriate and plural form otherwise?
-    
+    [Commit 07f11a4](https://github.com/diaryofdiscoveries/student-directory/commit/07f11a4ef4b9786952324f1a8d01fd5b320f7001)
 
 10. We've been using the chomp() method to get rid of the last return character. Find another method among those provided by the String class that could be used for the same purpose (although it will require passing some arguments).
     [Commit f119a25](https://github.com/diaryofdiscoveries/student-directory/commit/f119a25a2a5e5e0b0d2b029f5f1302ce02396332)
