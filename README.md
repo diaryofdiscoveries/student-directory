@@ -34,7 +34,7 @@ ruby directory.rb
     [Commit 6afd93e](https://github.com/diaryofdiscoveries/student-directory/commit/6afd93e4658d1288df7a56f2477ddbcfc134a30e)
 
 8.  Once you complete the previous exercise, change the way the users are displayed: print them grouped by cohorts. To do this, you'll need to get a list of all existing cohorts (the  map() method may be useful but it's not the only option), iterate over it and only print the students from that cohort.
-    
+    [Commit d70c556](https://github.com/diaryofdiscoveries/student-directory/commit/d70c5562ec8203d586b49d35e71cc4f56f561ff9)
 
 9.  Right now if we have only one student, the user will see a message "Now we have 1 students", whereas it should be "Now we have 1 student". How can you fix it so that it used singular form when appropriate and plural form otherwise?
     
