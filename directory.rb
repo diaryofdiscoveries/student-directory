@@ -40,8 +40,8 @@ end
 
 def show_students
   print_header
-  print_students_list(@students)
-  print_footer(@students)
+  print_students_list
+  print_footer
 end
 
 def process(selection)
@@ -155,8 +155,8 @@ def print_header
 end
 
 # 8.12 
-def print_students_list(students)
-  if students.empty?
+def print_students_list
+  if @students.empty?
     puts "No students available".center(@width)
   else
     i = 0
@@ -167,7 +167,7 @@ def print_students_list(students)
   end
 end
 
-def print_students_list_by_cohort(students)
+def print_students_list_by_cohort
   if @students.empty?
     puts "No students available".center(@width)
   else
@@ -184,7 +184,7 @@ def print_students_list_by_cohort(students)
 end
 
 # 8.2
-def search_by_first_letter(students)
+def search_by_first_letter
   if @students.empty?
     puts "No students available".center(@width)
   else
@@ -205,7 +205,7 @@ def search_by_first_letter(students)
 end
 
 # 8.3
-def search_by_name_length(students)
+def search_by_name_length
   if @students.empty?
     puts "No students available".center(@width)
   else
@@ -226,7 +226,7 @@ def search_by_name_length(students)
 end
 
 
-def print_footer(students)
+def print_footer
   if !@students.empty?
     puts "Overall, we have #{pluralize_students @students.count}".center(@width)
   else
