@@ -5,8 +5,10 @@ The student directory script allows you to manage the list of students enrolled 
 
 ## How to use :star2:
 
+Providing a .csv file is optional
+
 ```shell
-ruby directory.rb
+ruby directory.rb file.csv
 ```
 
 
