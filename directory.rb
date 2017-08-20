@@ -118,7 +118,7 @@ def print_header
 end
 
 # 8.12 
-def print(students)
+def print_student_list(students)
   if students.empty?
     puts "No students available".center(@width)
   else
@@ -126,6 +126,22 @@ def print(students)
     while i < @students.count
       puts "#{i + 1}. #{@students[i][:name]}, #{@students[i][:country_of_birth]} (#{@students[i][:cohort]})".center(@width)
       i += 1
+    end
+  end
+end
+
+def print_student_list_by_cohort(students)
+  if @students.empty?
+    puts "No students available".center(@width)
+  else
+    cohorts = @students.map do |student|
+      student[:cohort]
+    end
+    cohorts.uniq.each do |cohort|
+      puts "#{cohort} cohort".upcase.center(@width)
+        @students.each do |student|
+          puts student[:name] if student[:cohort] == cohort
+        end
     end
   end
 end
@@ -183,5 +199,5 @@ end
 #call the methods
 @students = input_students
 print_header 
-print(@students) 
+print_student_list_by_cohort(@students) 
 print_footer(@students)
