@@ -204,9 +204,9 @@ def add_student(name, cohort, country_of_birth, hobbies)
   @students << {name: name, cohort: cohort.to_sym, country_of_birth: country_of_birth, hobbies: hobbies}
 end
 
-def save_students
+def save_students(filename = @default_filename)
   # open the file for writing
-  file = File.open("students.csv", "w")
+  file = File.open(filename, "w")
   # iterate over the array of students
   @students.each do |student|
     student_data = [student[:name], student[:cohort], student[:country_of_birth], student[:hobbies]]
@@ -214,6 +214,9 @@ def save_students
     file.puts csv_line
   end
   file.close
+  puts
+  puts  "*** File saved successfully ***"
+  puts
 end
 
 def load_students(filename = @default_filename)
@@ -223,6 +226,10 @@ def load_students(filename = @default_filename)
     add_student(name, cohort, country_of_birth, hobbies)
   end
   file.close
+  puts
+  puts  "*** File loaded successfully ***"
+  puts  "*** Using: #{filename}"
+  puts
 end
 
 def try_load_students
