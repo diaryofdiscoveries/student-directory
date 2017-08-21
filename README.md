@@ -69,7 +69,7 @@ ruby directory.rb file.csv
     [Commit 716eb2e](https://github.com/diaryofdiscoveries/student-directory/commit/716eb2e3e1e10eb82cd681208840c64d560841ac)  [Commit 3d5cff6](https://github.com/diaryofdiscoveries/student-directory/commit/3d5cff6e43209f6483829dc5806c7b08f404b05b)
 
 6.  We are opening and closing the files manually. Read the documentation of the File class to find out how to use a code block (do...end) to access a file, so that we didn't have to close it explicitly (it will be closed automatically when the block finishes). Refactor the code to use a code block.
-
+    [Commit 472322a](https://github.com/diaryofdiscoveries/student-directory/commit/472322a4dfe40db111d7e4269da253d296f821c6)
 
 7.  We are de-facto using CSV format to store data. However, Ruby includes [a library to work with the CSV files](http://ruby-doc.org/stdlib-2.0.0/libdoc/csv/rdoc/CSV.html) that we could use instead of working directly with the files. Refactor the code to use this library.
 
