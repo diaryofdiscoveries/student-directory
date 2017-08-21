@@ -66,7 +66,7 @@ ruby directory.rb file.csv
     [Commit e78a95b](https://github.com/diaryofdiscoveries/student-directory/commit/e78a95b0c2fc02f75b093fa893570704e584f3af)
 
 5.  The filename we use to save and load data (menu items 3 and 4) is hardcoded. Make the script more flexible by asking for the filename if the user chooses these menu items.
-
+    [Commit 716eb2e](https://github.com/diaryofdiscoveries/student-directory/commit/716eb2e3e1e10eb82cd681208840c64d560841ac)
 
 6.  We are opening and closing the files manually. Read the documentation of the File class to find out how to use a code block (do...end) to access a file, so that we didn't have to close it explicitly (it will be closed automatically when the block finishes). Refactor the code to use a code block.
 
