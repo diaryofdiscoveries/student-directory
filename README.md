@@ -63,7 +63,7 @@ ruby directory.rb file.csv
     [Commit e49ca77](https://github.com/diaryofdiscoveries/student-directory/commit/e49ca77b1f450014d7f0d13e5ce0e1399a83596e)
 
 4.  Right now, when the user choses an option from our menu, there's no way of them knowing if the action was successful. Can you fix this and implement feedback messages for the user?
-
+    [Commit e78a95b](https://github.com/diaryofdiscoveries/student-directory/commit/e78a95b0c2fc02f75b093fa893570704e584f3af)
 
 5.  The filename we use to save and load data (menu items 3 and 4) is hardcoded. Make the script more flexible by asking for the filename if the user chooses these menu items.
 
