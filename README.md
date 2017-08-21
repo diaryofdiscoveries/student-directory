@@ -60,7 +60,7 @@ ruby directory.rb file.csv
     [Commit af6fdfa](https://github.com/diaryofdiscoveries/student-directory/commit/af6fdfa6f36eac790ce5209954296552780f30b6)
 
 3.  Continue refactoring the code. Which method is a bit too long? What method names are not clear enough? Anything else you'd change to make your code look more elegant? Why?
-
+    [Commit e49ca77](https://github.com/diaryofdiscoveries/student-directory/commit/e49ca77b1f450014d7f0d13e5ce0e1399a83596e)
 
 4.  Right now, when the user choses an option from our menu, there's no way of them knowing if the action was successful. Can you fix this and implement feedback messages for the user?
 
