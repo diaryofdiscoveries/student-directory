@@ -1,4 +1,6 @@
-# 8.7
+@loaded_filename = ""
+@default_filename = "students.csv"
+
 @students = [] # an empty array accessible to all methods
 
 @cohorts = {
@@ -16,6 +18,7 @@
   December: 8
 }
 
+
 #helpers
 def pluralize_students(n)
   if n == 1 then "#{n} great student" else "#{n} great students" end
@@ -27,15 +30,13 @@ def divider
   puts "-------------".center(@width)
 end
 
-@loaded_filename = ""
-@default_filename = "students.csv"
-
 def header_menu
   divider
   puts "-- Student Directory".center(@width)
   puts "-- Using file: #{@loaded_filename}".center(@width)
   divider
 end
+
 
 def interactive_main_menu
   loop do
@@ -50,6 +51,7 @@ def interactive_search_menu
     process_search_menu(STDIN.gets.chomp)
   end
 end
+
 
 def print_main_menu
   header_menu
@@ -72,6 +74,7 @@ def print_search_menu
   puts "3. Back to Main Menu"
   puts
 end
+
 
 def process_search_menu(selection)
   case selection
@@ -109,6 +112,7 @@ def process_main_menu(selection)
     puts "I don't know what you meant, please try again"
   end
 end
+
 
 def show_students
   print_header
@@ -224,19 +228,6 @@ def save_students(filename = @default_filename)
   end
 end
 
-def load_students(filename = @default_filename)
-  file = File.open(filename, "r") do |file|
-    file.readlines.each do |line|
-    name, cohort, country_of_birth, hobbies = line.chomp.split(',')
-    add_student(name, cohort, country_of_birth, hobbies)
-    end
-    puts
-    puts  "*** File loaded successfully ***"
-    puts  "*** Using: #{filename}"
-    puts
-  end
-end
-
 def try_load_students
   filename = ARGV.first     # first argument from the command line
   if filename.nil?
@@ -254,6 +245,20 @@ def try_load_students
   end
 end
 
+def load_students(filename = @default_filename)
+  file = File.open(filename, "r") do |file|
+    file.readlines.each do |line|
+    name, cohort, country_of_birth, hobbies = line.chomp.split(',')
+    add_student(name, cohort, country_of_birth, hobbies)
+    end
+    puts
+    puts  "*** File loaded successfully ***"
+    puts  "*** Using: #{filename}"
+    puts
+  end
+end
+
+
 def print_header
   if !@students.empty?
     puts "The students of Villains Academy".center(@width)
@@ -262,7 +267,7 @@ def print_header
   end
 end
 
-# 8.12 
+
 def print_students_list
   if @students.empty?
     puts "No students available".center(@width)
@@ -291,7 +296,7 @@ def print_students_list_by_cohort
   end
 end
 
-# 8.2
+
 def search_by_first_letter
   if @students.empty?
     puts "No students available".center(@width)
@@ -312,7 +317,6 @@ def search_by_first_letter
   end
 end
 
-# 8.3
 def search_by_name_length
   if @students.empty?
     puts "No students available".center(@width)
