@@ -95,10 +95,12 @@ def process_main_menu(selection)
   when "3"
     interactive_search_menu
   when "4"
-    save_students
+    puts  "Please enter the name of the file (eg. data.csv)"
+    save_filename = gets.chomp
+    save_filename.empty? ? save_students : save_students(save_filename)
   when "5"
-    puts "Please enter the name of the file (eg data.csv)" 
-    puts  "or leave empty to open the default file, students.csv"
+    puts  "Please enter the name of the file (eg. data.csv)" 
+    puts  "or leave empty to open the default file"
     load_filename = gets.chomp
     load_filename.empty? ? load_students : load_students(load_filename)
   when "9"
@@ -207,9 +209,7 @@ def add_student(name, cohort, country_of_birth, hobbies)
   @students << {name: name, cohort: cohort.to_sym, country_of_birth: country_of_birth, hobbies: hobbies}
 end
 
-def save_students
-  puts "Please enter the filename (eg. data.csv)"
-  filename = gets.chomp
+def save_students(filename = @default_filename)
   # open the file for writing
   file = File.open(filename, "w")
   # iterate over the array of students
@@ -249,7 +249,7 @@ def try_load_students
     @loaded_filename = filename
     load_students(filename)
   else      # if it doesn't exist
-    puts "Sorry, #{filename} doesn't exist."
+    puts "Sorry, #{filename} not found."
     exit    # quit the program
   end
 end
