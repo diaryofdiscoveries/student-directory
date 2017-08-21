@@ -57,7 +57,7 @@ ruby directory.rb file.csv
     [Commit b33d87b](https://github.com/diaryofdiscoveries/student-directory/commit/b33d87bcec7f6078f3f8e6b0fcfec836faf4c1ca)
     
 2.  How could you make the program load students.csv by default if no file is given on startup? Which methods would you need to change?
-
+    [Commit af6fdfa](https://github.com/diaryofdiscoveries/student-directory/commit/af6fdfa6f36eac790ce5209954296552780f30b6)
 
 3.  Continue refactoring the code. Which method is a bit too long? What method names are not clear enough? Anything else you'd change to make your code look more elegant? Why?
 
