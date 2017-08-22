@@ -72,7 +72,7 @@ ruby directory.rb file.csv
     [Commit 472322a](https://github.com/diaryofdiscoveries/student-directory/commit/472322a4dfe40db111d7e4269da253d296f821c6)
 
 7.  We are de-facto using CSV format to store data. However, Ruby includes [a library to work with the CSV files](http://ruby-doc.org/stdlib-2.0.0/libdoc/csv/rdoc/CSV.html) that we could use instead of working directly with the files. Refactor the code to use this library.
-
+    [Commit c663b60](https://github.com/diaryofdiscoveries/student-directory/commit/c663b60786bd8f80f49d09210e1ace3dbd49fcc9)
 
 8.  Write a short program that reads its own source code (search StackOverflow to find out how to get the name of the currently executed file) and prints it on the screen.
 
