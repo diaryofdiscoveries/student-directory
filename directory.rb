@@ -1,3 +1,5 @@
+require 'csv'
+
 @loaded_filename = ""
 @default_filename = "students.csv"
 
@@ -214,14 +216,13 @@ def add_student(name, cohort, country_of_birth, hobbies)
 end
 
 def save_students(filename = @default_filename)
-  # open the file for writing
-  file = File.open(filename, "w") do |file|
-  # iterate over the array of students
+  # open the file for writing using CSV class
+  CSV.open(filename, "wb") do |csv|
+    # iterate over the array of students
     @students.each do |student|
-      student_data = [student[:name], student[:cohort], student[:country_of_birth], student[:hobbies]]
-      csv_line = student_data.join(",")
-      file.puts csv_line
+      csv << [student[:name], student[:cohort], student[:country_of_birth], student[:hobbies]]
     end
+    @loaded_filename = filename
     puts
     puts  "*** Saved successfully to #{filename} ***"
     puts
@@ -236,7 +237,9 @@ def try_load_students
     puts
     @loaded_filename = @default_filename
     load_students
-  elsif File.exists?(filename) # if it exists
+    return
+  end  
+  if File.exists?(filename) # if it exists
     @loaded_filename = filename
     load_students(filename)
   else      # if it doesn't exist
@@ -246,16 +249,27 @@ def try_load_students
 end
 
 def load_students(filename = @default_filename)
-  file = File.open(filename, "r") do |file|
-    file.readlines.each do |line|
-    name, cohort, country_of_birth, hobbies = line.chomp.split(',')
-    add_student(name, cohort, country_of_birth, hobbies)
+  if File.exists?(filename)
+    CSV.foreach(filename) do |row|
+      name, cohort, country_of_birth, hobbies = row
+      add_student(name, cohort, country_of_birth, hobbies)
     end
+    @loaded_filename = filename
     puts
     puts  "*** File loaded successfully ***"
     puts  "*** Using: #{filename}"
     puts
-  end
+  else
+    if filename == @default_filename
+      puts "The default file #{@default_filename} was not found"
+      File.write("students.csv", "")
+      @loaded_filename = filename
+      puts "A new #{@default_filename} was created"
+    else 
+      puts "*** WARNING *** File #{filename} not found"
+      puts "Using #{@loaded_filename}"
+    end
+  end  
 end
 
 
