@@ -1,6 +1,6 @@
 # Student Directory #
 
-The student directory script allows you to manage the list of students you have enrolled.
+The student directory script allows you to manage the list of students enrolled.
 
 
 ## How to use :star2:
@@ -75,4 +75,4 @@ ruby directory.rb file.csv
     [Commit c663b60](https://github.com/diaryofdiscoveries/student-directory/commit/c663b60786bd8f80f49d09210e1ace3dbd49fcc9)
 
 8.  Write a short program that reads its own source code (search StackOverflow to find out how to get the name of the currently executed file) and prints it on the screen.
-
+    [Commit ca04aad](https://github.com/diaryofdiscoveries/student-directory/commit/ca04aad59528adaa79793fdf0a8a3332039ab6a0)
