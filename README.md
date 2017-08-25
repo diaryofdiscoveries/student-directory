@@ -2,6 +2,9 @@
 
 The student directory script allows you to manage the list of students enrolled.
 
+## Objectives of building the directory
+
+Getting a basic understanding of the Ruby programming language.
 
 ## How to use :star2:
 
@@ -10,6 +13,10 @@ The student directory script allows you to manage the list of students enrolled.
 Providing a .csv file is optional
 
 ```shell
+git clone https://github.com/diaryofdiscoveries/student-directory.git
+
+cd student-directory
+
 ruby directory.rb file.csv
 ```
 
